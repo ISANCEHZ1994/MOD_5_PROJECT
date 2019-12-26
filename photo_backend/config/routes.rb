@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/appointments', to: 'appointments#index'
   get '/photographers', to: 'photographers#index'
   get '/photos', to: 'photos#index'
+  get '/addresses', to: 'addresses#index'
 
   
 

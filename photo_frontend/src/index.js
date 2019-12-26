@@ -17,9 +17,9 @@ const middlewares = [thunk]
 const store = createStore(rootReducer,applyMiddleware(...middlewares));
 
 ReactDOM.render(<Provider store={store}>
-      <App/>  
-      </Provider>,
-       document.getElementById('root'));
+                  <App/>  
+                </Provider>,
+document.getElementById('root'));
 
 
 serviceWorker.unregister();
