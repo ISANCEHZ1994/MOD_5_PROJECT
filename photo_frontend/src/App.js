@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/HomePage/HomePage';
 // import NavBar from './NavBar';
 
 import { handleAppointments, handleClients, handlePhotographers, handlePhotos, handleAddress } from './store/actions'; //imported from actions.js
@@ -13,10 +13,12 @@ function App() {
   const dispatch = useDispatch()                                                            
 
   return (
-    <div className="App" >
+    <div >
      {/* <img src={'https://shelbycountyartscouncil.com/wp-content/uploads/2017/09/pexels-photo-226243.jpeg'} alt={'here is a photo'}/> */}
       
       <HomePage/>
+      <br/>
+      <br/>
       <button onClick={ () => dispatch( handleAppointments )}> This is for Appointments </button>
       <button onClick= { () => dispatch( handleClients ) }> This is for Clients </button>
       <button onClick={ () => dispatch( handlePhotographers)}> This is for Photographers </button>
