@@ -1,0 +1,21 @@
+.title{
+    background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg');
+    /* background-color:  #44A7C5; */
+    /* height: 20vh;
+    width: auto; */
+    padding: 50px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: auto; */
+    background-size: cover;
+    /* background-size: 90% 90%; */
+
+    font-style: italic;
+}
+
+/* .info{
+
+
+
+} */

@@ -1,5 +1,6 @@
 const initialState = {
-    photos: []
+    photos: [],
+    isLoaded: false
 }
 
 export function photosReducer(state = initialState, action){
@@ -10,7 +11,8 @@ export function photosReducer(state = initialState, action){
                     // debugger
                     return{
                         ...state,
-                        photos: action.payload // payload comes from the actions.js file line #63
+                        photos: action.payload, // payload comes from the actions.js file line #63
+                        isLoaded: true
                     }
                 default: 
                     return state;

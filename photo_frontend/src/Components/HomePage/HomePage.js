@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import SignUpModal from '../SignUpModal';
 import LoginModal from '../LoginModal';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import './HomePage.css'
 
 function HomePage() {
@@ -138,5 +138,3 @@ export default HomePage;
 //         )
 //     }
 // }
-
-

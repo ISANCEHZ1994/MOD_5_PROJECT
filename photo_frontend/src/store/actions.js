@@ -44,6 +44,7 @@ export const handleClients = dispatch => {
 }
 
 // PHOTOGRAPHERS WORK <----------------------------------
+
 export const handlePhotographerAsnc = photographers => {
     return { type: "FETCH_PHOTOGRAPHER", payload: photographers}
 }
