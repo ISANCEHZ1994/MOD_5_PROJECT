@@ -7,7 +7,7 @@ export function photosReducer(state = initialState, action){
             switch(action.type){
                 case "FETCH_PHOTOS":
                     
-                    console.log('this is the action payload',action.payload)
+                    // console.log('this is the action payload',action.payload)
                     // debugger
                     return{
                         ...state,

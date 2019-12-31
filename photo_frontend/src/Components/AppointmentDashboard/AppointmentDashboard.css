@@ -1,0 +1,25 @@
+.AppointTitle{
+    background-image: url('https://www.amle.org/Portals/0/EasyGalleryImages/1/776/Merenbloom_pic.jpg');
+    /* background-color:  #44A7C5; */
+    /* height: 20vh;
+    width: auto; */
+    padding: 50px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: auto; */
+    background-size: cover;
+    /* background-size: 90% 90%; */
+   
+    font-style: italic;
+}
+.titleStyle{
+    /* border: double; */
+    /* border-right: 1px solid rgba(0,0,0,0.12); */
+    /* background-clip: padding-box; */
+    background: white;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    background-clip: content-box; }
+.AppointInfo{
+    text-align: center;
+}

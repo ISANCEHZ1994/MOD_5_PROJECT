@@ -1,18 +1,17 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  handlePhotos } from '../../../store/actions';
+import {  handlePhotos, selectPhotographer } from '../../../store/actions';
 import { Figure } from 'react-bootstrap';
 import Photos from '../Photos/Photos';
 import './Photographers.css';
 
 
-
-
-
-
 function Photographers(props){
+  // console.log(props.history)
+  // debugger
 
   const photos = useSelector(state => state.photos)
+  
   const dispatch = useDispatch()
   if(!photos.isLoaded){
     dispatch(handlePhotos)
@@ -30,7 +29,12 @@ function Photographers(props){
     // height={300}
     alt={props.name}
     src={props.pic}
-    
+    // {/*  onClick here! */}
+    onClick={()=>{ 
+      dispatch( selectPhotographer(props), console.log(props) )
+      console.log(props.history)
+      props.history.push('/select_date')
+    }}
   />
   </Figure>
   {/* <Figure.Caption>
@@ -51,6 +55,11 @@ function Photographers(props){
 
 
         </div>
+
+        <div>
+        <h1>Here are just some of my favorite shots!</h1>
+        </div>
+
         {photos.photos.map( photo => <Photos
                   key={photo.id}
                   photographer_id={photo.photographer_id}

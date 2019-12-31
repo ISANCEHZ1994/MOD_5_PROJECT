@@ -6,7 +6,7 @@ export function addressReducer(state = initialState, action){
             switch(action.type){
                 case "FETCH_ADDRESS":
                     
-                    console.log('this is the action payload',action.payload) 
+                    // console.log('this is the action payload',action.payload) 
                     // debugger
                     return{
                         ...state,

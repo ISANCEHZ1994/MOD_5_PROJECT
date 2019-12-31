@@ -34,7 +34,7 @@ module PhotoBackend
         origins '*'
         resource '*',
           headers: :any,
-          methods: %i(get post put patch delete options head)
+          methods: [:get, :post, :patch, :delete] # %i(get post put patch delete options head) 
       end
     end
 

@@ -5,9 +5,10 @@ import LoginModal from '../LoginModal';
 import { Button, Row, Col } from 'react-bootstrap';
 import './HomePage.css'
 
-function HomePage() {
+function HomePage(props) {
 
-   
+//    console.log(props.history)
+//    debugger
     //for modal
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -17,33 +18,12 @@ function HomePage() {
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
 
-    const appointments = useSelector(state => state.appointments)//calls from the reducer index where we assigned the apponitment property which leads the appointment reducer
-    // reducer folder / index --> appointmentReducer.js
-    const clients = useSelector(state => state.clients)
-    const photographers = useSelector(state => state.photographers)
-    const photos = useSelector(state => state.photos)
-    const addresses = useSelector(state => state.addresses)
-
-    // const mystyle = {
-    //     color: "white",
-    //     backgroundColor: "DodgerBlue",
-    //     padding: "10px",
-    //     fontFamily: "Arial",
-    //     height: '500px',
-    //     width: '130px'
-    //   };
-
-    // const test = {
-    //         height: '500px',
-    //         width: '130%',
-    //         // backgroundColor: 'powderblue' 
-    // };
-
-    // const container = {
-    //     backgroundColor: rgba(0,0,0,0.3),
-    //     // height: calc(100vh - 56px);
-    //     height: calc(~"100vh - 400px")
-    //   }
+    // const appointments = useSelector(state => state.appointments)//calls from the reducer index where we assigned the apponitment property which leads the appointment reducer
+    // // reducer folder / index --> appointmentReducer.js
+    // const clients = useSelector(state => state.clients)
+    // const photographers = useSelector(state => state.photographers)
+    // const photos = useSelector(state => state.photos)
+    // const addresses = useSelector(state => state.addresses
 
     return (
   
@@ -53,10 +33,10 @@ function HomePage() {
                 
                 <Row style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
-                        <div >
+                        <div className='header'>
 
-                            <div className='header'>
-                        <h1 style={{color: 'white'}}> Here we have a big ass WELCOME page where itll introduce what we do here </h1> 
+                            <div className='headerDetail'>
+                        <h1 > Welcome To Your Snap! </h1> 
                             </div>
                             
                         </div>   
@@ -66,8 +46,10 @@ function HomePage() {
                 <Row className ='rowParent' style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                    <div  className='mystyle'  >
-                   1 of 2 this is a test img --->  
-                
+
+            Here at Your Snap we strive to make any day beautiful and perfect.
+      
+
                    </div>
                     </Col>
 
@@ -78,6 +60,8 @@ function HomePage() {
                     
                     </Col>
                 </Row>
+
+
                 <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                      <Col style={{ paddingLeft: 0, paddingRight: 0 }}>  
                      <img className='imgTest' src={'https://i.pinimg.com/originals/aa/92/25/aa922540e07fbe1fda01393a7b470b09.jpg'} alt='something cool'/>
@@ -87,36 +71,39 @@ function HomePage() {
                     </Col>
 
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
-                     Here is another column
-                    </Col>
-                </Row>
 
-        <Button variant="primary" onClick={() => handleShow()}>
-                Sign up Here!
-            </Button>
-            {/* passing modal with props */}
-            <SignUpModal
-                show={show}
-                onHide={() => handleClose()}
-            />
+                     If you are new to this site go ahead and sign up!
+                      <Button variant="primary" onClick={() => handleShow()}>
+                        Sign up Here!
+                    </Button>
+                     {/* passing modal with props */}
+                     <SignUpModal
+                     history={props.history}
+                     show={show}
+                     onHide={() => handleClose()}
+                     />
 
+
+                     If you already made an appointment and would like to update or cancel 
             <Button variant="primary" onClick={() => handleShow2()}>
                 Login Here!
             </Button>
             {/* passing modal with props */}
             <LoginModal
+                history={props.history}
                 show={show2}
                 onHide={() => handleClose2()}
             />
+
+            
+                    </Col>
+                </Row>
+
             </div>
 
             
            
-            {console.log(appointments)}
-            {console.log(clients)}
-            {console.log(photographers)}
-            {console.log(photos)}
-            {console.log(addresses)}
+          
         </div>
   
     )
