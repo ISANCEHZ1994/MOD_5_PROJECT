@@ -1,13 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Row, Col } from 'react-bootstrap';
+import {  Row, Col } from 'react-bootstrap';
 import {  handleAppointments } from '../../store/actions';
-import Calendar from 'react-calendar';
+import Display from '../Display/Display';
+// import Calendar from 'react-calendar';
 import './AppointmentDashboard.css';
 
 // FOR RETURNING CLIENTS!!!
 
-function AppointmentDashboard(){
+function AppointmentDashboard(props){
 
     const appointments = useSelector(state=>state.appointments)
     const dispatch = useDispatch()
@@ -15,6 +16,12 @@ function AppointmentDashboard(){
     dispatch(handleAppointments)
 }
 
+    // const currentClient = localStorage.id
+    // console.log(localStorage.id) 
+    // console.log(props.history)
+    // console.log(appointments)
+    // debugger
+    
     return(
         <div className='mainContainer'>
         <div>
@@ -27,13 +34,49 @@ function AppointmentDashboard(){
                         </div>   
                     </Col>
             </Row>
-            <Row style={{ marginLeft: 0, marginRight: 0 }}>
+            {/* <Row style={{ marginLeft: 0, marginRight: 0 }}>
                 <Col style={{ marginLeft: 0, marginRight: 0 }}>
                     <div className='AppointInfo'>
                             <Calendar />
                     </div>
                 </Col>
+            </Row> */}
+            <Row style={{ marginLeft: 0, marginRight: 0 }}>
+                <Col style={{ marginLeft: 0, marginRight: 0 }}>
+                  <div>
+                        {appointments.appointments.map( appointment => 
+                        
+                        appointment.client_id == localStorage.id
+                        ?  <Display 
+                        key={appointment.id}
+                        id={appointment.id}
+                        client={appointment.client_id}
+                        client_name={appointment.client.name}
+                        photographer={appointment.photographer_id}
+                        photographer_name={appointment.photographer.name}
+                        time={appointment.time}
+                        />
+                        : null
+                         )}
+                        
+                    </div>   
+                </Col>
+                
+
             </Row>
+           
+                <div>
+                    <button onClick={()=> {  localStorage.clear()
+                                        props.history.push('/home_page') }}>
+                        HOME
+                    </button>
+                </div>
+                <div>
+                    <button onClick={ () => props.history.push('/client_dashboard')}>
+                        ANOTHER APPOINTMENT? 
+                    </button>
+                </div>
+           
         </div>
         </div>
     )

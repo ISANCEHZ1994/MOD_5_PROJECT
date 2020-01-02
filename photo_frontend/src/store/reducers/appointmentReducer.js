@@ -1,8 +1,7 @@
 const initialState = {
     appointments: [],
     isLoaded: false,
-    newDate: null,
-    dataSent: {}
+    // dataSent: {}
 }
 
 export function appointmentReducer(state = initialState, action){
@@ -16,22 +15,25 @@ export function appointmentReducer(state = initialState, action){
                         appointments: action.payload, // payload comes from the actions.js file line #9
                         isLoaded: true
                     }
-                case "CREATE_APPOINT":
-                    return{
-                        ...state,
-                        // newAppointment: true,
-                        newDate: action.payload
-                    }
-                case "SAVE_APPOINT":
-                    return{
-                        ...state,
-                        dataSent: action.payload
-                    }
-                // case "SAVE_DATE":
+               
+                // case "SAVE_APPOINT":
                 //     return{
                 //         ...state,
-                //         saveDate: true
+                //         dataSent: action.payload
                 //     }
+                case "CREATE_APPOINT":
+                    console.log(action.payload)
+                    debugger
+                    return{
+                        ...state,
+                        appointments: [...state.appointments, action.payload],
+                        isLoaded: false
+                    }
+                case "DELETE_APPOINT":
+                    return{
+                        ...state,
+                        appointments: state.appointments.filter(appointment => appointment.id!== action.payload)
+                    }
                 default: 
                     return state;
             }

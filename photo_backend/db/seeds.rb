@@ -94,6 +94,8 @@ testAppointment = Appointment.create({
     photographer_id: alex.id, client_id: max.id, time: "#{time1}"
 })
 
+
+
 testAppointment2 = Appointment.create({
     photographer_id: eric.id, client_id: ray.id, time: " #{time2} "
 })

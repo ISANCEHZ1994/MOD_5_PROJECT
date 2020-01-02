@@ -10,7 +10,7 @@ import SelectDate from './Components/SelectDate/SelectDate';
 
 function App() {
       // const [modalShow, setModalShow] = React.useState(false);
-
+  
 
   // const dispatch = useDispatch()                                                            
 
@@ -23,7 +23,7 @@ function App() {
       <Route path="/home_page" component={HomePage}/>
       <Route path="/client_dashboard" component={ClientDashboard}/>
       <Route path='/appointments_dashboard' component={AppointmentDashboard}/>
-      <Route path='/select_date' component={SelectDate}/>
+      <Route path='/select_date' component={SelectDate} />
 
 
       <br/>

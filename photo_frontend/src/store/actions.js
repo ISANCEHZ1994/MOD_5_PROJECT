@@ -28,15 +28,18 @@ export const handleAppointments = dispatch => {
     })
 }
 
-export const createAppointment = date => {
-    return { type: "CREATE_APPOINT", payload: date}
-}
-
 export const sendAppointment = info => {
     return { type: "SAVE_APPOINT", payload: info}
 }
 
-export const sendAppointHandler = (e,) =>{
+export const sendAppointHandlerAsync = newAppointment => {
+    return { type: "CREATE_APPOINT", payload: newAppointment}
+}
+
+export const sendAppointHandler = ( time,data ) =>{
+    console.log(data,time)
+    debugger
+
     return dispatch =>{
         fetch( appointmentURL, {
             method: "POST",
@@ -46,13 +49,36 @@ export const sendAppointHandler = (e,) =>{
             },
             body: JSON.stringify({
                 'appointment':{
-    
-                    
+                    photographer_id: data.selectedPhotographer.id,
+                    client_id: localStorage.id,
+                    time: `2020-01-${data.day}T${time}:00.000Z`
                 }
             })
         })
+        .then( resp => resp.json() )
+        .then( newAppointment => {
+            // console.log(newAppointment)
+            // debugger
+            dispatch(sendAppointHandlerAsync(newAppointment))
+        })
     }
-    
+}
+
+export const deleteApppointmentAsync = destroyApppoint_id =>{
+    return { type: "DELETE_APPOINT", payload: destroyApppoint_id}
+}
+
+export const deleteAppointmentHandler = (appointment_id) => {
+    return dispatch =>{
+    fetch(appointmentURL + `/${appointment_id}`,{
+        method: "DELETE",
+        headers:{
+            Authorization: `Bearer ${localStorage.token}`,
+            'Content-Type' : 'application/json'
+            },
+        
+    }, dispatch(deleteApppointmentAsync(appointment_id)))
+}
 }
 
 // export const saveADate = info => {

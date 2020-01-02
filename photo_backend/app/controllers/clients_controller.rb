@@ -13,8 +13,8 @@ class ClientsController < ApplicationController
    end
 
    def create
-      # byebug
       client = Client.new(client_params)
+      byebug
       # render json: client
       if client.valid?
          client.save
@@ -28,7 +28,7 @@ class ClientsController < ApplicationController
    private 
    def client_params 
 
-      # byebug
+      byebug
      params.require(:client).permit(:name, :email, :password, :phone_number)
 
    end

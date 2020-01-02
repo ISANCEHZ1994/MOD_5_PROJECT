@@ -67,6 +67,7 @@ class signUpModal extends React.Component{
               placeholder="Something secret"
               aria-label="Password"
               aria-describedby="basic-addon1"
+              type='password'
             />
           </InputGroup>
 
@@ -79,7 +80,7 @@ class signUpModal extends React.Component{
         </button>
         {/* <Button onClick={(e)=> { createClient(e)
                               this.props.history.push('/client_dashboard')}} > Submit </Button> */}
-        <Button onClick={this.props.onHide}>Close</Button>
+        {/* <Button onClick={this.props.onHide}>Close</Button> */}
       </Modal.Footer>
       </Form>
     </Modal>

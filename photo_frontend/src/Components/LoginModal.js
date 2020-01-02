@@ -46,6 +46,7 @@ class loginModal extends React.Component{
               placeholder="I know you know this.."
               aria-label="Password"
               aria-describedby="basic-addon1"
+              type='password'
             />
           </InputGroup>
         </div>
@@ -53,11 +54,11 @@ class loginModal extends React.Component{
       </Modal.Body>
       <Modal.Footer>
       <button type='submit' >
-          god i hope this works
+          Welcome Back!
         </button>
          
          {/*onClick={()=>{this.props.history.push('/appointments_dashboard')} */}
-        <Button onClick={this.props.onHide}>Close</Button>
+        {/* <Button onClick={this.props.onHide}>Close</Button> */}
       </Modal.Footer>
       </Form>
     </Modal>

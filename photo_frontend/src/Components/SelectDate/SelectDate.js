@@ -6,7 +6,11 @@ import './SelectDate.css';
 import TimeMenu from './TimeMenu';
 import Calendar from 'react-calendar';
 
-function SelectDate(){
+function SelectDate(props){
+
+    // console.log(props.history)
+    // debugger
+    
 
     const selectedPhotographer = useSelector( state => state.photographers.selectedPhotographer )
     
@@ -59,6 +63,10 @@ function SelectDate(){
                                     show={show}
                                     onHide={()=> handleClose()}
                                     functionAsProps = {functionFromParent}
+                                    day={day}
+                                    photographerName={selectedPhotographer.name}
+                                    selectedPhotographer={selectedPhotographer}
+                                    history={props.history}
                                     />
                                 </div> : null}
                         </div>
