@@ -11,7 +11,7 @@ export function photographerReducer(state = initialState, action){
                     // debugger
                     return{
                         ...state,
-                        photographers: action.payload, // payload comes from the actions.js file line #13
+                        photographers: action.payload, 
                         isLoaded: true
                     }
                 case "SELECT_PHOTOGRAP":

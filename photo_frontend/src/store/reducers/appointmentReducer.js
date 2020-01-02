@@ -1,8 +1,8 @@
 const initialState = {
     appointments: [],
     isLoaded: false,
-    // newAppointment: false,
-    newDate: null
+    newDate: null,
+    dataSent: {}
 }
 
 export function appointmentReducer(state = initialState, action){
@@ -22,6 +22,16 @@ export function appointmentReducer(state = initialState, action){
                         // newAppointment: true,
                         newDate: action.payload
                     }
+                case "SAVE_APPOINT":
+                    return{
+                        ...state,
+                        dataSent: action.payload
+                    }
+                // case "SAVE_DATE":
+                //     return{
+                //         ...state,
+                //         saveDate: true
+                //     }
                 default: 
                     return state;
             }

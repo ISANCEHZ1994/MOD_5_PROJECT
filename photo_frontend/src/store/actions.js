@@ -32,6 +32,33 @@ export const createAppointment = date => {
     return { type: "CREATE_APPOINT", payload: date}
 }
 
+export const sendAppointment = info => {
+    return { type: "SAVE_APPOINT", payload: info}
+}
+
+export const sendAppointHandler = (e,) =>{
+    return dispatch =>{
+        fetch( appointmentURL, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${localStorage.token}`,
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify({
+                'appointment':{
+    
+                    
+                }
+            })
+        })
+    }
+    
+}
+
+// export const saveADate = info => {
+//     return { type: "SAVE_DATE", payload: info}
+// }
+
 // CLIENT WORK <----------------------------------
 export const handleClientAsnc = clients =>{
     return { type: "FETCH_CLIENTS", payload: clients}
@@ -99,7 +126,6 @@ export const loginClient = (obj, history) => {
             history.push('/appointments_dashboard')
         }
     })
-
 }
 
 

@@ -75,7 +75,7 @@ class signUpModal extends React.Component{
       </Modal.Body>
       <Modal.Footer>
         <button type='submit'>
-          god i hope this works
+          Submit
         </button>
         {/* <Button onClick={(e)=> { createClient(e)
                               this.props.history.push('/client_dashboard')}} > Submit </Button> */}

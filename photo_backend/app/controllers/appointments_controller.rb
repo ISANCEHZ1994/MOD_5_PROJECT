@@ -13,9 +13,19 @@ class AppointmentsController < ApplicationController
  
     # end
  
-    # def create
- 
-    # end
+    def create
+        
+        appointment = Appointment.new(appointment_params)
+        byebug
+        if  appointment.valid?
+            appointment.save
+            render json: appointment
+            # render json: {photographer_id: photographer.id, client_id: client.id, time: " " , status: :created
+        else 
+            render json: { message: " Failed to create NEW_APPOINTMENT" }, status: :not_acceptable
+        end
+
+    end
  
     # def edit
  
@@ -28,5 +38,9 @@ class AppointmentsController < ApplicationController
     # def destroy
      
     # end
- 
+    private
+    def appointment_params
+        params.require(:photographer_id, :client_id, :time)
+        # params.require(:client).permit(:name, :email, :password, :phone_number)
+    end
  end

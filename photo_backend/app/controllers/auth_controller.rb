@@ -7,9 +7,9 @@ class AuthController < ApplicationController
         client = Client.find_by(email: params[:email])
 
         #checks if user/client exist
-        byebug
+        # byebug
         if client &&  client.authenticate(params[:password])    
-            byebug
+            # byebug
             render json: {email: client.email, id: client.id, token: encode_token({"client_id": client.id})} #this is what gets checked in localStorage
         else
             render json: {error: "Invalid username or password!"}

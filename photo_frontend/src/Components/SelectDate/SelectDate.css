@@ -1,0 +1,29 @@
+.photographerInfo{
+  box-sizing: content-box; 
+  border-style: double; 
+  width: auto;
+  height: auto;
+  padding: 30px;
+  text-align: center  
+}
+
+.clientInfo{
+    box-sizing: content-box; 
+    border-style: double; 
+    width: auto;
+    height: auto;
+    padding: 30px;
+    text-align: center 
+}
+
+.timeBox{
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-right: 10%;
+    top:0;
+    z-index: 1;
+    right: 0;
+    border: 3px solid blue;
+    background-color: aliceblue
+}
