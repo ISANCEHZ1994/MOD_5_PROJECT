@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_224722) do
   create_table "appointments", force: :cascade do |t|
     t.integer "photographer_id"
     t.integer "client_id"
-    t.time "time"
+    t.string "time"
   end
 
   create_table "clients", force: :cascade do |t|

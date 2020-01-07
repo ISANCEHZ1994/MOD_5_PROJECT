@@ -83,25 +83,25 @@ martha = Photo.create({
 # time= Time.new(2020,2,14,4,30)
 # puts "#{time}"
 
-time1=Time.parse("Dec 25 2019 10:30")
+time1=Time.parse("Jan 25 2020 10:30")
 # puts "#{time1}"
 
-time2 = Time.parse("Dec 31 2019 11:30")
+time2 = Time.parse("Jan 31 2020 11:30")
 
-time3 = Time.parse("Dec 27 2019 4:30")
+time3 = Time.parse("Jan 27 2020 4:30")
 
 testAppointment = Appointment.create({
-    photographer_id: alex.id, client_id: max.id, time: "#{time1}"
+    photographer_id: alex.id, client_id: max.id, time: "Jan 25 2019 10:30"
 })
 
 
 
 testAppointment2 = Appointment.create({
-    photographer_id: eric.id, client_id: ray.id, time: " #{time2} "
+    photographer_id: eric.id, client_id: ray.id, time: " Jan 31 2020 11:30 "
 })
 
 testAppointment3 = Appointment.create({
-    photographer_id: martha.id, client_id: mary.id, time: "#{time3}"
+    photographer_id: martha.id, client_id: mary.id, time: "Jan 27 2020 4:30"
 })
 
 puts 'seeded BITCH'

@@ -37,8 +37,8 @@ export const sendAppointHandlerAsync = newAppointment => {
 }
 
 export const sendAppointHandler = ( time,data ) =>{
-    console.log(data,time)
-    debugger
+    // console.log(data,time)
+    // debugger
 
     return dispatch =>{
         fetch( appointmentURL, {
@@ -51,13 +51,14 @@ export const sendAppointHandler = ( time,data ) =>{
                 'appointment':{
                     photographer_id: data.selectedPhotographer.id,
                     client_id: localStorage.id,
-                    time: `2020-01-${data.day}T${time}:00.000Z`
-                }
+                    time: `Jan ${data.day} 2020 ${time}:00`
+                },
+                'time': `Jan ${data.day} 2020 ${time}:00`
             })
         })
         .then( resp => resp.json() )
         .then( newAppointment => {
-            // console.log(newAppointment)
+            console.log(newAppointment)
             // debugger
             dispatch(sendAppointHandlerAsync(newAppointment))
         })

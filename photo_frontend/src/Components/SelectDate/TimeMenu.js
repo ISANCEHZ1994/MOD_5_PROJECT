@@ -23,7 +23,7 @@ function TimeMenu(props){
 
             <button type= 'submit' onClick={()=> { dispatch(sendAppointHandler(time, props))
                                                     props.history.push('/appointments_dashboard')}}>  
-               Yeet
+               CONFIRM
             </button>
 
            <button onClick={props.onHide}> 

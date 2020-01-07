@@ -46,16 +46,17 @@ function HomePage(props) {
                 <Row className ='rowParent' style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                    <div  className='mystyle'  >
-
-            Here at Your Snap we strive to make any day beautiful and perfect.
-      
+                       
+                            <div className='innerBoarder'>   
+                    Here at Your Snap we strive to make any day beautiful and perfect.
+                            </div>
 
                    </div>
                     </Col>
 
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                     
-                        <img className= 'imgTest' src={'https://66.media.tumblr.com/41eb6b7b85db859d9f643962ddfc47aa/tumblr_ouw9e5LGy61uzf1fuo3_1280.jpg'} alt={'kingdom hearts wedding'}/>
+                        <img className= 'imgTest' src={'https://cdn.mos.cms.futurecdn.net/HfpNyWo7Um89DknAYnoRcN.jpg'} alt={'kingdom hearts wedding'}/>
                     
                     
                     </Col>
@@ -64,7 +65,7 @@ function HomePage(props) {
 
                 <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                      <Col style={{ paddingLeft: 0, paddingRight: 0 }}>  
-                     <img className='imgTest' src={'https://i.pinimg.com/originals/aa/92/25/aa922540e07fbe1fda01393a7b470b09.jpg'} alt='something cool'/>
+                     <img className='imgTest' src={'https://s23527.pcdn.co/wp-content/uploads/2019/01/photographer-1867699_1920-745x511.jpg.optimal.jpg'} alt='something cool'/>
                     {/* <div className='extra'>
                     Here we should have just one column
                     </div> */}

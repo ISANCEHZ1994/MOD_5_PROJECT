@@ -14,11 +14,15 @@ class AppointmentsController < ApplicationController
     # end
  
     def create
-        
+        # byebug
+        time = Time.parse(appointment_params[:time])
         appointment = Appointment.new(appointment_params)
+        appointment.time = time
         # byebug
         if  appointment.valid?
             appointment.save
+            appointment.update(time: time)
+            # byebug
             render json: appointment, :include => [:client, :photographer]
             # render json: {photographer_id: photographer.id, client_id: client.id, time: " " , status: :created
         else 

@@ -19,7 +19,7 @@ function Display(props){
                 <h4> Your ID: {props.client}</h4>
                 <h4> Photographer: {props.photographer_name} </h4>
                 <h4> Photographer ID: { props.photographer}</h4>
-                <h4> At this time : {timeFomat(props.time)}</h4>
+                <h4> At this date : {timeFomat(props.time)}</h4>
             </div>
 
             <div >

@@ -23,7 +23,7 @@ export function appointmentReducer(state = initialState, action){
                 //     }
                 case "CREATE_APPOINT":
                     console.log(action.payload)
-                    debugger
+                    // debugger
                     return{
                         ...state,
                         appointments: [...state.appointments, action.payload],

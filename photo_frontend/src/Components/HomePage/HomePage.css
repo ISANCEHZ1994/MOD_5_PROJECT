@@ -5,10 +5,16 @@
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     height: 500px;
-    width: 130px;
-    
+    width: 720px;
+    border-style: double;
+    text-align: center;
+    object-fit: fill;
     /* left: 00px; */
   };
+
+  .innerBoarder{
+    color: black;
+  }
 
 /* .test{
         height: '500px';
