@@ -1,7 +1,7 @@
 import React from 'react';
 import {  useDispatch } from 'react-redux';
 import { deleteAppointmentHandler } from '../../store/actions';
-// import './Display.css'
+import './Display.css'
 
 
 function Display(props){
@@ -14,7 +14,8 @@ function Display(props){
 
     return(
         <div>
-            <div>
+            <br></br>
+            <div className='appointCard'>
                 <h4> Client Name: {props.client_name} </h4>
                 <h4> Your ID: {props.client}</h4>
                 <h4> Photographer: {props.photographer_name} </h4>
@@ -24,13 +25,14 @@ function Display(props){
 
             <div >
                 <button onClick={() => dispatch(deleteAppointmentHandler(props.id))}>
-                        DELETE
+                        CANCEL
                 </button>
 
                 {/* <button>
                         UPDATE
                 </button> */}
             </div>
+            <br></br>
         </div>
         
     )

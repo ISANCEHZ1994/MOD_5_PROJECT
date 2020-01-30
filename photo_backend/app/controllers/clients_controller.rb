@@ -1,10 +1,10 @@
 class ClientsController < ApplicationController
 
-   skip_before_action :check_authentication, only: [:create]
+   skip_before_action :check_authentication, only: [:create, :index, :show]
 
    def index
-    clients = Client.all
-    render json: clients
+    @clients = Client.all
+    render json: @clients
    end
 
    def show
@@ -23,6 +23,11 @@ class ClientsController < ApplicationController
          render json: { message: " Failed to create NEW_CLIENT" }, status: :not_acceptable
       end
 
+   end
+
+   def destroy
+      client = Client.find_by_id (params[:id])
+      
    end
 
    private 

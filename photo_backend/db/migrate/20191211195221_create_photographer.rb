@@ -7,7 +7,7 @@ class CreatePhotographer < ActiveRecord::Migration[6.0]
       t.string :experiance
       t.string :specialty
       t.string :email
-      t.integer :phone_number
+      t.string :phone_number
     
     end
   end

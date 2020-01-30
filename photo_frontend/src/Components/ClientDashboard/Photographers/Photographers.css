@@ -1,20 +1,27 @@
 .photoCon{
-  /* width: 100px;
-  height: 100px; */
-  /* margin: 0 auto; */
-  /* position: relative;
-  left: 10px; */
-  /* position: center; */
   padding: 50px;
-  /* top: 39px;
-  right: 00; */
-  /* width: 250px;
-  height: 100px; */
   font-style: italic;
 }
 
 .info{
     background-color: aliceblue;
     border: double;
-    text-align: center
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 5px 10px;
+    
+}
+.zoom {
+  transition: transform .01s;
+  width: 1200px;
+  height: 1000px;
+  /* border: 1px solid; */
+  padding: 10px;
+  box-shadow: 5px 10px 18px
+}
+
+.zoom:hover {
+  /* -ms-transform: scale(1.5); IE 9 */
+  -webkit-transform: scale(1.0); /* Safari 3-8 */
+  transform: scale(1.1); 
 }

@@ -1,5 +1,7 @@
-/* .buttons{
-  position: absolute;
+.appointCard{
+  border-style: double;
+  border-width: 5px;
+  /* position: absolute;
   top: 80px;
-  right: 0;
-} */
+  right: 0; */
+}

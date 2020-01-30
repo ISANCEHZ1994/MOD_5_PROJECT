@@ -21,12 +21,9 @@ function ClientDashboard(props){
     //     dispatch(handlePhotos)
     // }
     // function getPhotographers(){
-
     //     return dispatch => {
-
     //     }
     // }
-
     // useEffect( () => {
     //     fetch( 'http://localhost:3000/photographers' )
     //     .then( resp => resp.json() )
@@ -54,7 +51,9 @@ function ClientDashboard(props){
             <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
                         <div >  
-                            {photographers.photographers.map( photographer => <Photographers 
+                            {photographers.photographers.map( photographer => 
+                            // console.log(photographer)
+                            <Photographers 
                             key={photographer.id}
                             id={photographer.id}
                             name={photographer.name}
@@ -65,8 +64,8 @@ function ClientDashboard(props){
                             phone={photographer.phone_number}
                             special={photographer.specialty}
                             history={props.history}
-
-                            />)}
+                            />
+                            )}
                         </div>
 
                         <div>

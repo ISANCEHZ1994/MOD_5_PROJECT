@@ -1,5 +1,8 @@
 class PhotosController < ApplicationController
 
+    skip_before_action :check_authentication, only: [:create, :index, :show]
+
+
     def index
         photos = Photo.all
         render json: photos

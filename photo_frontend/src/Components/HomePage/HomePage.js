@@ -9,6 +9,7 @@ function HomePage(props) {
 
 //    console.log(props.history)
 //    debugger
+
     //for modal
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -31,10 +32,9 @@ function HomePage(props) {
            
             <div >
                 
-                <Row style={{ marginLeft: 0, marginRight: 0 }}>
+                <Row style={{ marginLeft: 0, marginRight: 0 }}> {/* <-------- Everything is inside this ROW */}
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='header'>
-
                             <div className='headerDetail'>
                         <h1 > Welcome To Your Snap! </h1> 
                             </div>
@@ -43,37 +43,44 @@ function HomePage(props) {
                     </Col>
                 </Row>
 
-                <Row className ='rowParent' style={{ marginLeft: 0, marginRight: 0 }}>
+                <Row className ='rowParent' style={{ marginLeft: 0, marginRight: 0 }}> {/* <-------- Everything is inside this ROW */}
+
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
-                   <div  className='mystyle'  >
-                       
-                            <div className='innerBoarder'>   
-                    Here at Your Snap we strive to make any day beautiful and perfect.
+                    
+                    <div className='bg-image'> </div> {/* <-- This is the actual image */}
+
+                   <div  className='welcomeSquare'>
+
+                            <div className='innerBorder' >   
+                    <h4> Here at Your Snap we strive to make any day beautiful and perfect. Our photographers are dedicated to 
+                        take only the best photos in anyway you want.
+                    </h4>
                             </div>
 
                    </div>
                     </Col>
 
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
-                    
                         <img className= 'imgTest' src={'https://cdn.mos.cms.futurecdn.net/HfpNyWo7Um89DknAYnoRcN.jpg'} alt={'kingdom hearts wedding'}/>
-                    
-                    
                     </Col>
+
                 </Row>
 
 
-                <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
+                <Row style={{ paddingLeft: 0, paddingRight: 0 }}> {/* <-------- Everything is inside this ROW */}
+
                      <Col style={{ paddingLeft: 0, paddingRight: 0 }}>  
                      <img className='imgTest' src={'https://s23527.pcdn.co/wp-content/uploads/2019/01/photographer-1867699_1920-745x511.jpg.optimal.jpg'} alt='something cool'/>
-                    {/* <div className='extra'>
-                    Here we should have just one column
-                    </div> */}
                     </Col>
 
-                    <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
+                    <Col className='loginSquare' style={{ paddingLeft: 0, paddingRight: 0 }}>
 
-                     If you are new to this site go ahead and sign up!
+                        <div className='bg-image2'></div> 
+
+               
+
+                    <div className='innerBorder2'>
+                        <h4> If you are new to this site go ahead and sign up! </h4>
                       <Button variant="primary" onClick={() => handleShow()}>
                         Sign up Here!
                     </Button>
@@ -82,29 +89,23 @@ function HomePage(props) {
                      history={props.history}
                      show={show}
                      onHide={() => handleClose()}
-                     />
+                     /> 
+                     <br></br>
 
-
-                     If you already made an appointment and would like to update or cancel 
-            <Button variant="primary" onClick={() => handleShow2()}>
-                Login Here!
-            </Button>
-            {/* passing modal with props */}
-            <LoginModal
-                history={props.history}
-                show={show2}
-                onHide={() => handleClose2()}
-            />
-
-            
+                        <h4> If you already made an appointment and would like to update or cancel </h4> 
+                        <Button variant="primary" onClick={() => handleShow2()}>
+                            Login Here!
+                        </Button>
+                        {/* passing modal with props */}
+                        <LoginModal
+                            history={props.history}
+                            show={show2}
+                            onHide={() => handleClose2()}/>
+                    
+                </div>
                     </Col>
                 </Row>
-
             </div>
-
-            
-           
-          
         </div>
   
     )
@@ -114,15 +115,3 @@ function HomePage(props) {
 
 
 export default HomePage;
-
-
-// class HomePage extends Component {
-//     render(){     
-//         return(
-//             <div> 
-//                 Here we have a big WELCOME page where itll introduce what we do here
-//                 {console.log(appointment)}
-//             </div>
-//         )
-//     }
-// }

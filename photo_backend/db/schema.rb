@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_224722) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.integer "phone_number"
+    t.string "phone_number"
   end
 
   create_table "photographers", force: :cascade do |t|
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_224722) do
     t.string "experiance"
     t.string "specialty"
     t.string "email"
-    t.integer "phone_number"
+    t.string "phone_number"
   end
 
   create_table "photos", force: :cascade do |t|

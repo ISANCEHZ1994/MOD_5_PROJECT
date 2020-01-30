@@ -68,9 +68,10 @@ function AppointmentDashboard(props){
                 <div>
                     <button onClick={()=> {  localStorage.clear()
                                         props.history.push('/home_page') }}>
-                        HOME
+                        LOG OUT?
                     </button>
                 </div>
+                <br></br>
                 <div>
                     <button onClick={ () => props.history.push('/client_dashboard')}>
                         ANOTHER APPOINTMENT? 

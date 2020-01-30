@@ -1,13 +1,7 @@
 const initialState = {
     clients: [],
     isLoaded: false,
-    newClient: false,
-    // currentClient: {
-    //     name: '',
-    //     email: '',
-    //     password: '',
-    //     phone_number: [],
-    // }
+    newClient: false
 }
 
 export function clientReducer(state = initialState, action){
