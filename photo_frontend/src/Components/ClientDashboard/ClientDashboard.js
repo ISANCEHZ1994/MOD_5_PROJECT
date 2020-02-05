@@ -2,37 +2,22 @@ import  React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {  Row, Col } from 'react-bootstrap';
 import Photographers from './Photographers/Photographers'
-// import Photos from './Photos/Photos';
 import { handlePhotographers } from '../../store/actions';
 import './ClientDashboard.css';
 
 
 
 function ClientDashboard(props){
-    // console.log(props.history)
-    // debugger
+    
 
-    const photographers = useSelector(state => state.photographers)
+    const photographers = useSelector(state => state.photographers) // calls from the reducer index where we assigned the
+                                                                    // photographer property which leads the photographer reducer
+                                                                    // which then leads to the actions folder
     const dispatch = useDispatch()
     if(!photographers.isLoaded){
         dispatch(handlePhotographers)
     }
-    // if(!photos.isLoaded){
-    //     dispatch(handlePhotos)
-    // }
-    // function getPhotographers(){
-    //     return dispatch => {
-    //     }
-    // }
-    // useEffect( () => {
-    //     fetch( 'http://localhost:3000/photographers' )
-    //     .then( resp => resp.json() )
-    //     .then( photographers => {
-    //         this.setState({
-    //             photographers: photographers
-    //         })
-    //     })
-    // })
+   
 
 
     return(
@@ -52,7 +37,7 @@ function ClientDashboard(props){
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
                         <div >  
                             {photographers.photographers.map( photographer => 
-                            // console.log(photographer)
+                            
                             <Photographers 
                             key={photographer.id}
                             id={photographer.id}

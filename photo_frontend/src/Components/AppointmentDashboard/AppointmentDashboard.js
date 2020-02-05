@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import {  Row, Col } from 'react-bootstrap';
 import {  handleAppointments } from '../../store/actions';
 import Display from '../Display/Display';
-// import Calendar from 'react-calendar';
 import './AppointmentDashboard.css';
 
 // FOR RETURNING CLIENTS!!!
@@ -34,13 +33,8 @@ function AppointmentDashboard(props){
                         </div>   
                     </Col>
             </Row>
-            {/* <Row style={{ marginLeft: 0, marginRight: 0 }}>
-                <Col style={{ marginLeft: 0, marginRight: 0 }}>
-                    <div className='AppointInfo'>
-                            <Calendar />
-                    </div>
-                </Col>
-            </Row> */}
+            
+
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                 <Col style={{ marginLeft: 0, marginRight: 0 }}>
                   <div>

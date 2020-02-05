@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-// import { useSelector } from 'react-redux';
 import SignUpModal from '../SignUpModal';
 import LoginModal from '../LoginModal';
 import { Button, Row, Col } from 'react-bootstrap';
 import './HomePage.css'
 
 function HomePage(props) {
-
-//    console.log(props.history)
-//    debugger
 
     //for modal
     const [show, setShow] = useState(false);
@@ -21,6 +17,7 @@ function HomePage(props) {
 
     // const appointments = useSelector(state => state.appointments)//calls from the reducer index where we assigned the apponitment property which leads the appointment reducer
     // // reducer folder / index --> appointmentReducer.js
+    
     // const clients = useSelector(state => state.clients)
     // const photographers = useSelector(state => state.photographers)
     // const photos = useSelector(state => state.photos)
@@ -52,12 +49,13 @@ function HomePage(props) {
                    <div  className='welcomeSquare'>
 
                             <div className='innerBorder' >   
-                    <h4> Here at Your Snap we strive to make any day beautiful and perfect. Our photographers are dedicated to 
+                    <h4> 
+                        Here at Your Snap we strive to make any day beautiful and perfect. Our photographers are dedicated to 
                         take only the best photos in anyway you want.
                     </h4>
                             </div>
 
-                   </div>
+                   </div> 
                     </Col>
 
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
@@ -70,12 +68,12 @@ function HomePage(props) {
                 <Row style={{ paddingLeft: 0, paddingRight: 0 }}> {/* <-------- Everything is inside this ROW */}
 
                      <Col style={{ paddingLeft: 0, paddingRight: 0 }}>  
-                     <img className='imgTest' src={'https://s23527.pcdn.co/wp-content/uploads/2019/01/photographer-1867699_1920-745x511.jpg.optimal.jpg'} alt='something cool'/>
+                        <img className='imgTest' src={'https://s23527.pcdn.co/wp-content/uploads/2019/01/photographer-1867699_1920-745x511.jpg.optimal.jpg'} alt='something cool'/>
                     </Col>
 
                     <Col className='loginSquare' style={{ paddingLeft: 0, paddingRight: 0 }}>
 
-                        <div className='bg-image2'></div> 
+                        <div className='bg-image2'></div> {/* <-- This is the actual image */}
 
                
 

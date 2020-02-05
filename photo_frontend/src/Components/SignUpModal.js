@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, InputGroup, FormControl, Form } from 'react-bootstrap';
+import { Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
 import { createClient } from '../store/actions';
 
 class signUpModal extends React.Component{
