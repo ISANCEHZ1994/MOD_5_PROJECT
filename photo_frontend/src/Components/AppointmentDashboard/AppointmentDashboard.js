@@ -14,6 +14,13 @@ function AppointmentDashboard(props){
   if(!appointments.isLoaded){
     dispatch(handleAppointments)
 }
+// console.log(appointments)
+
+function photographerPic(){
+        appointments.appointments.map( appointment => {
+            console.log(appointment)
+        })
+}
 
     // const currentClient = localStorage.id
     // console.log(localStorage.id) 
@@ -70,6 +77,11 @@ function AppointmentDashboard(props){
                     <button onClick={ () => props.history.push('/client_dashboard')}>
                         ANOTHER APPOINTMENT? 
                     </button>
+                    
+                    <button>
+                        click here for photographer pic
+                    </button>
+
                 </div>
            
         </div>

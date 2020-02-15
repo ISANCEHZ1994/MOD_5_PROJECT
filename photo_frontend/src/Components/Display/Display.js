@@ -1,6 +1,6 @@
 import React from 'react';
-import {  useDispatch } from 'react-redux';
-import { deleteAppointmentHandler } from '../../store/actions';
+import {  useDispatch, useSelector } from 'react-redux';
+import { deleteAppointmentHandler, handlePhotographers } from '../../store/actions';
 import './Display.css'
 
 
@@ -11,6 +11,17 @@ function Display(props){
     }
 
     const dispatch = useDispatch()
+    const photographers = useSelector(state => state.photographers)
+    if(!photographers.isLoaded){
+        dispatch(handlePhotographers)
+    }
+   
+
+    // function photographerPic(){
+    //     photographers.photographers.map( photographer => {
+    //         console.log(photographer)
+    //     })
+    // }
 
     return(
         <div>
@@ -28,9 +39,11 @@ function Display(props){
                         CANCEL
                 </button>
 
-                {/* <button>
-                        UPDATE
+                {/* <button onClick={() => photographerPic()}>
+                    Run Function for pic
                 </button> */}
+
+                
             </div>
             <br></br>
         </div>
