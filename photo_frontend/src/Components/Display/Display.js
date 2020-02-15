@@ -12,16 +12,16 @@ function Display(props){
 
     const dispatch = useDispatch()
     const photographers = useSelector(state => state.photographers)
+
     if(!photographers.isLoaded){
         dispatch(handlePhotographers)
     }
-   
 
-    // function photographerPic(){
-    //     photographers.photographers.map( photographer => {
-    //         console.log(photographer)
-    //     })
-    // }
+    function photographerPic(){
+        photographers.photographers.map( photographer => {
+            console.log(photographer.profile_pic_url)
+        })
+    }
 
     return(
         <div>
@@ -39,9 +39,9 @@ function Display(props){
                         CANCEL
                 </button>
 
-                {/* <button onClick={() => photographerPic()}>
+                <button onClick={() => photographerPic()}>
                     Run Function for pic
-                </button> */}
+                </button>
 
                 
             </div>

@@ -14,13 +14,12 @@ function AppointmentDashboard(props){
   if(!appointments.isLoaded){
     dispatch(handleAppointments)
 }
-// console.log(appointments)
 
-function photographerPic(){
-        appointments.appointments.map( appointment => {
-            console.log(appointment)
-        })
-}
+// function photographerPic(){
+//         appointments.appointments.map( appointment => {
+//             appointment.photographer.profile_pic_url
+//         })
+// }
 
     // const currentClient = localStorage.id
     // console.log(localStorage.id) 
@@ -78,9 +77,9 @@ function photographerPic(){
                         ANOTHER APPOINTMENT? 
                     </button>
                     
-                    <button>
+                    {/* <button onClick={ () => photographerPic() }>
                         click here for photographer pic
-                    </button>
+                    </button> */}
 
                 </div>
            
