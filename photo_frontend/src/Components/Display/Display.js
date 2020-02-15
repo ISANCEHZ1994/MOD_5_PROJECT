@@ -17,12 +17,9 @@ function Display(props){
         dispatch(handlePhotographers)
     }
 
-    function photographerPic(){
-        photographers.photographers.map( photographer => {
-            console.log(photographer.profile_pic_url)
-        })
-    }
+    // const photographerPic = photographers.photographers.map( photographer =>  photographer.profile_pic_url )
 
+    
     return(
         <div>
             <br></br>
@@ -33,17 +30,13 @@ function Display(props){
                 <h4> Photographer ID: { props.photographer}</h4>
                 <h4> At this date : {timeFomat(props.time)}</h4>
             </div>
+            {/* <br></br> */}
 
             <div >
                 <button onClick={() => dispatch(deleteAppointmentHandler(props.id))}>
                         CANCEL
                 </button>
 
-                <button onClick={() => photographerPic()}>
-                    Run Function for pic
-                </button>
-
-                
             </div>
             <br></br>
         </div>

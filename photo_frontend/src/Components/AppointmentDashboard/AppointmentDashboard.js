@@ -65,6 +65,8 @@ function AppointmentDashboard(props){
 
             </Row>
            
+           <div className='buttons'>
+               <br></br>
                 <div>
                     <button onClick={()=> {  localStorage.clear()
                                         props.history.push('/home_page') }}>
@@ -76,13 +78,9 @@ function AppointmentDashboard(props){
                     <button onClick={ () => props.history.push('/client_dashboard')}>
                         ANOTHER APPOINTMENT? 
                     </button>
-                    
-                    {/* <button onClick={ () => photographerPic() }>
-                        click here for photographer pic
-                    </button> */}
-
                 </div>
-           
+                <br></br>
+           </div>
         </div>
         </div>
     )
