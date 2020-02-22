@@ -31,7 +31,7 @@ class signUpModal extends React.Component{
               placeholder="Something to call you.."
               aria-label="Full Name"
               aria-describedby="basic-addon1"
-              // onChange={()=> {}}
+             
             />
           </InputGroup>
 
