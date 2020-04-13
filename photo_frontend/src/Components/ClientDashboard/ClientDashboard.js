@@ -17,9 +17,6 @@ function ClientDashboard(props){
     if(!photographers.isLoaded){
         dispatch(handlePhotographers)
     }
-   
-
-
     return(
 <div className='mainContainer'>
         <div>

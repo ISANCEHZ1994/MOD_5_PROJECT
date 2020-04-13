@@ -39,7 +39,6 @@ export const sendAppointHandlerAsync = newAppointment => {
 export const sendAppointHandler = ( time,data ) =>{
     // console.log(data,time)
     // debugger
-
     return dispatch =>{
         fetch( appointmentURL, {
             method: "POST",

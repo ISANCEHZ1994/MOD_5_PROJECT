@@ -15,21 +15,8 @@ function AppointmentDashboard(props){
     dispatch(handleAppointments)
 }
 
-// function photographerPic(){
-//         appointments.appointments.map( appointment => {
-//             appointment.photographer.profile_pic_url
-//         })
-// }
-
-    // const currentClient = localStorage.id
-    // console.log(localStorage.id) 
-    // console.log(props.history)
-    // console.log(appointments)
-    // debugger
-    
     return(
         <div className='mainContainer'>
-        <div>
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='AppointTitle' > 
@@ -40,7 +27,6 @@ function AppointmentDashboard(props){
                     </Col>
             </Row>
             
-
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                 <Col style={{ marginLeft: 0, marginRight: 0 }}>
                   <div>
@@ -61,10 +47,7 @@ function AppointmentDashboard(props){
                         
                     </div>   
                 </Col>
-                
-
             </Row>
-           
            <div className='buttons'>
                <br></br>
                 <div>
@@ -80,8 +63,7 @@ function AppointmentDashboard(props){
                     </button>
                 </div>
                 <br></br>
-           </div>
-        </div>
+           </div> {/* this closes buttons*/}
         </div>
     )
 }

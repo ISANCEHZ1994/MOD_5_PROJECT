@@ -7,20 +7,13 @@ import './Photographers.css';
 
 
 function Photographers(props){
-  // console.log(props.history)
-  // debugger
 
   const photos = useSelector(state => state.photos)
-  // console.log(photos.photos)
-  // console.log(props.id)
+
   const f = photos.photos.filter( photo => {
-    // console.log(photo)
    return photo.photographer_id == props.id
-    
-    // console.log(photo.photographer_id)
   })
 
-  // console.log(f)
   
   const dispatch = useDispatch()
   if(!photos.isLoaded){
@@ -36,19 +29,18 @@ function Photographers(props){
             <br></br>
             
             <center>
-            <Figure>
-  <Figure.Image
-    className='zoom'
-    alt={props.name}
-    src={props.pic}
-    onClick={()=>{ 
-      dispatch( selectPhotographer(props) )
-      // console.log(props.history)
-      props.history.push('/select_date')
-    }}
-  />
-  </Figure>
-  </center>
+                <Figure>
+                  <Figure.Image
+                    className='zoom'
+                    alt={props.name}
+                    src={props.pic}
+                    onClick={()=>{ 
+                      dispatch( selectPhotographer(props) )
+                      props.history.push('/select_date')
+                    }}
+                  />
+              </Figure>
+            </center>
     <br></br>
         <div className='info'>
 
@@ -71,23 +63,16 @@ function Photographers(props){
         </div>
 
         {f.map( photo => 
-                // console.log(photo)
                   <Photos
                   key={photo.id}
                   id={photo.id}
                   photographer_id={photo.photographer_id}
                   url={photo.url}
                   />
-                  
         )}
-
-
         <br></br>
         </div>
-        
     )
-
-    
 };
 
 export default Photographers;

@@ -13,15 +13,9 @@ function Photos(props){
     })
     
     console.log(photographerArray)
-    // console.log(props.id)
-    
 
     return(
-        <div className='photos'>
-            {/* <div className='photo'>
-                <img src={props.url} alt="photographer's photos"/> 
-            </div> */}
-        <Carousel>
+        <Carousel className='photos'>
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
@@ -34,10 +28,6 @@ function Photos(props){
                     </Carousel.Caption>
                 </Carousel.Item>
         </Carousel>
-
-
-        </div>
-       
     )
 }
 
