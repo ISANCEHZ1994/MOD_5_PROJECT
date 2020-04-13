@@ -54,9 +54,6 @@ class loginModal extends React.Component{
       <button type='submit' >
           Welcome Back!
         </button>
-         
-         {/*onClick={()=>{this.props.history.push('/appointments_dashboard')} */}
-        {/* <Button onClick={this.props.onHide}>Close</Button> */}
       </Modal.Footer>
       </Form>
     </Modal>

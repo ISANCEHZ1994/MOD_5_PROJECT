@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import {  Row, Col } from 'react-bootstrap';
-// import {  createAppointment } from '../../store/actions';
 import './SelectDate.css';
 import TimeMenu from './TimeMenu';
 import Calendar from 'react-calendar';
 
 function SelectDate(props){
-
-    // console.log(props.history)
-    // debugger
-    
 
     const selectedPhotographer = useSelector( state => state.photographers.selectedPhotographer )
     
@@ -57,7 +52,6 @@ function SelectDate(props){
                     <Col style={{ marginLeft: 0, marginRight: 0 }}>
                         <div className='AppointInfo'>
                                 <Calendar onClickDay = {(e) => test(e)}/>
-                                
                                { show === true ? <div className='timeBox'>
                                     <TimeMenu 
                                     show={show}
@@ -73,19 +67,16 @@ function SelectDate(props){
                         
                     </Col>
 
-                    <Col>
+                    <Col style={{ marginLeft: 0, marginRight: 0 }}>
                         <br></br>
 
                             <div className='photographerInfo'> 
                                 <h1> You have chosen {selectedPhotographer.name} to be your photographer! </h1>
                             </div>
-
                          <br></br>
-
                             <div className='clientInfo'>
                                 <h1> Your ID number is {localStorage.id} </h1> 
                             </div>
-
                      </Col>
                 </Row>
             
@@ -96,7 +87,6 @@ function SelectDate(props){
                         </div>
                     </Col>
             </Row>
-            
         </div>
     </div>
     )

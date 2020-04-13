@@ -17,9 +17,6 @@ function Display(props){
         dispatch(handlePhotographers)
     }
 
-    // const photographerPic = photographers.photographers.map( photographer =>  photographer.profile_pic_url )
-
-    
     return(
         <div>
             <br></br>
@@ -30,7 +27,6 @@ function Display(props){
                 <h4> Photographer ID: { props.photographer}</h4>
                 <h4> At this date : {timeFomat(props.time)}</h4>
             </div>
-            {/* <br></br> */}
 
             <div >
                 <button onClick={() => dispatch(deleteAppointmentHandler(props.id))}>

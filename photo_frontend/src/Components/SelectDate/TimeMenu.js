@@ -7,8 +7,6 @@ function TimeMenu(props){
 
     const [time, setTime] = useState('');
     const handleTime = (time) => setTime(time)
-    // console.log(time)
-
     const dispatch = useDispatch()
     
     return(
@@ -16,10 +14,6 @@ function TimeMenu(props){
         <div >
            <input type='time' name='Appointment Time' id='appointment_time' onChange = {(e)=> handleTime(e.target.value)}>
            </input>
-
-            {/* <button type= 'submit' onClick={()=> props.functionAsProps(time)}>  
-               Yeet
-            </button> */}
 
             <button type= 'submit' onClick={()=> { dispatch(sendAppointHandler(time, props))
                                                     props.history.push('/appointments_dashboard')}}>  

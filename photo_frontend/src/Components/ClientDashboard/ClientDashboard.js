@@ -19,13 +19,10 @@ function ClientDashboard(props){
     }
     return(
 <div className='mainContainer'>
-        <div>
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='title' > 
-
                                 <h1 style={{color: 'white'}}> Choose Your Photographer! </h1> 
-
                         </div>   
                     </Col>
             </Row>
@@ -49,14 +46,8 @@ function ClientDashboard(props){
                             />
                             )}
                         </div>
-
-                        <div>
-                            
-                        </div>
                     </Col>
             </Row>
-
-        </div>
 </div>
     )
 };
