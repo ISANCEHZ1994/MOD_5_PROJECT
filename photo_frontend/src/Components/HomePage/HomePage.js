@@ -15,14 +15,6 @@ function HomePage(props) {
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
 
-    // const appointments = useSelector(state => state.appointments)//calls from the reducer index where we assigned the apponitment property which leads the appointment reducer
-    // // reducer folder / index --> appointmentReducer.js
-    
-    // const clients = useSelector(state => state.clients)
-    // const photographers = useSelector(state => state.photographers)
-    // const photos = useSelector(state => state.photos)
-    // const addresses = useSelector(state => state.addresses
-
     return (
   
         <div className='mainContainer'>

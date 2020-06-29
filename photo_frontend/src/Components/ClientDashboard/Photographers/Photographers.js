@@ -11,7 +11,7 @@ function Photographers(props){
   const photos = useSelector(state => state.photos)
 
   const f = photos.photos.filter( photo => {
-   return photo.photographer_id == props.id
+   return photo.photographer_id === props.id
   })
 
   

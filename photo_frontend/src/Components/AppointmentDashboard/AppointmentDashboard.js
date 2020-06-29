@@ -14,7 +14,6 @@ function AppointmentDashboard(props){
   if(!appointments.isLoaded){
     dispatch(handleAppointments)
 }
-
     return(
         <div className='mainContainer'>
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
@@ -48,20 +47,18 @@ function AppointmentDashboard(props){
                     </div>   
                 </Col>
             </Row>
-           <div className='buttons'>
-               <br></br>
-                <div>
-                    <button onClick={()=> {  localStorage.clear()
+           <div className='buttonContainer'>
+                    <button  onClick={()=> {  localStorage.clear()
                                         props.history.push('/home_page') }}>
                         LOG OUT?
                     </button>
-                </div>
+              
                 <br></br>
-                <div>
-                    <button onClick={ () => props.history.push('/client_dashboard')}>
+             
+                    <button  onClick={ () => props.history.push('/client_dashboard')}>
                         ANOTHER APPOINTMENT? 
                     </button>
-                </div>
+                
                 <br></br>
            </div> {/* this closes buttons*/}
         </div>

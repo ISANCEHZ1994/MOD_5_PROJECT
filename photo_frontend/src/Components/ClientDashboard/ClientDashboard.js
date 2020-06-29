@@ -5,8 +5,6 @@ import Photographers from './Photographers/Photographers'
 import { handlePhotographers } from '../../store/actions';
 import './ClientDashboard.css';
 
-
-
 function ClientDashboard(props){
     
 
