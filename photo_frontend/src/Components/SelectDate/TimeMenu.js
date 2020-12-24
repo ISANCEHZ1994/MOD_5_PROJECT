@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { sendAppointHandler } from '../../store/actions';
-//  import { Modal } from 'react-bootstrap';  //Button, InputGroup, FormControl, Form 
 
 function TimeMenu(props){
 
     const [time, setTime] = useState('');
+
     const handleTime = (time) => setTime(time)
+    
     const dispatch = useDispatch()
     
     return(
-        
-        <div >
+        <div>
            <input type='time' name='Appointment Time' id='appointment_time' onChange = {(e)=> handleTime(e.target.value)}>
            </input>
-
             <button type= 'submit' onClick={()=> { dispatch(sendAppointHandler(time, props))
                                                     props.history.push('/appointments_dashboard')}}>  
                CONFIRM

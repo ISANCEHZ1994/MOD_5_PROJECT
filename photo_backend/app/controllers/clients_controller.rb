@@ -15,7 +15,7 @@ class ClientsController < ApplicationController
    def create
       client = Client.new(client_params)
       # byebug
-      # render json: client
+      # render json: clien
       if client.valid?
          client.save
          render json: {id: client.id, name: client.name, email: client.email, phone_number: client.phone_number, token: encode_token({"client_id": client.id})}, status: :created

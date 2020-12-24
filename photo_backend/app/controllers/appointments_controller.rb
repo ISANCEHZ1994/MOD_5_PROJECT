@@ -4,15 +4,7 @@ class AppointmentsController < ApplicationController
         appointments = Appointment.all
         render json: appointments.to_json(:include => { :client => { :include => :addresses}, :photographer => { :include => :photos } })
     end
- 
-    # def show
-      
-    # end
- 
-    # def new
- 
-    # end
- 
+
     def create
         # byebug
         time = Time.parse(appointment_params[:time])
@@ -28,23 +20,13 @@ class AppointmentsController < ApplicationController
         else 
             render json: { message: " Failed to create NEW_APPOINTMENT" }, status: :not_acceptable
         end
-
     end
- 
-    # def edit
- 
-    # end
- 
-    # def update
- 
-    # end
  
     def destroy
         appointment = Appointment.find(params[:id])
         # byebug
         appointment.destroy 
     end
-
 
     private
     def appointment_params

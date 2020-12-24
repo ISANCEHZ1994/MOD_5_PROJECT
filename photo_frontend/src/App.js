@@ -15,27 +15,24 @@ function App() {
   // const dispatch = useDispatch()                                                            
 
   return (
-
     <BrowserRouter>
-   
-     {/* <img src={'https://shelbycountyartscouncil.com/wp-content/uploads/2017/09/pexels-photo-226243.jpeg'} alt={'here is a photo'}/> */}
+
      <Switch>
-      <Route path="/home_page" component={HomePage}/>
-      <Route path="/client_dashboard" component={ClientDashboard}/>
-      <Route path='/appointments_dashboard' component={AppointmentDashboard}/>
-      <Route path='/select_date' component={SelectDate} />
-
-
-      
-      {/* <button onClick={ () => dispatch( handleAppointments )}> This is for Appointments </button>
-      <button onClick= { () => dispatch( handleClients ) }> This is for Clients </button>
-      <button onClick={ () => dispatch( handlePhotographers)}> This is for Photographers </button>
-      <button onClick={ () => dispatch( handlePhotos )}> This is for JUST PHOTOS </button> 
-      <button onClick={ () => dispatch( handleAddress )}> This is for Addresses </button> */}
+        <Route path="/home_page" component={HomePage}/>
+        <Route path="/client_dashboard" component={ClientDashboard}/>
+        <Route path='/appointments_dashboard' component={AppointmentDashboard}/>
+        <Route path='/select_date' component={SelectDate} />
     </Switch>
    
     </BrowserRouter>
   );
 }
 
+
 export default App;
+
+//       <button onClick={ () => dispatch( handleAppointments )}> This is for Appointments </button>
+//       <button onClick= { () => dispatch( handleClients ) }> This is for Clients </button>
+//       <button onClick={ () => dispatch( handlePhotographers)}> This is for Photographers </button>
+//       <button onClick={ () => dispatch( handlePhotos )}> This is for JUST PHOTOS </button> 
+//       <button onClick={ () => dispatch( handleAddress )}> This is for Addresses </button>

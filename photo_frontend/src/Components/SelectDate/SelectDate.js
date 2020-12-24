@@ -8,50 +8,45 @@ import Calendar from 'react-calendar';
 function SelectDate(props){
 
     const selectedPhotographer = useSelector( state => state.photographers.selectedPhotographer )
-    
-    // const dispatch = useDispatch()
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [day, setDay] = useState('');
-    const handleSetDay= (day) => setDay(day);
+    // const [time, setTime] = useState('');
 
+    // const handleTime = (time) => setTime(time)
+
+    const [day, setDay] = useState('');
+
+    const handleSetDay = (day) => setDay(day);
     
-    const test = (e) =>{
+    const settingDay = (e) =>{
         // console.log('day has been clicked', e.getDate(), 'this is the id', localStorage.id)
-        handleShow()
+        handleShow();
         handleSetDay(e.getDate())
-    }
+    };
 
     //BEHOLD USING INVERSE DATA FLOW you slow fuck
     const functionFromParent = (time) =>{
-
         // Here I want to start using this data to save a date on the calandar
         console.log('proving a point', time, day, localStorage.id)
-
-    }
+    };
     
     return(
     <div className='mainContainer'>
         <div>
-            
             <Row style={{ marginLeft: 0, marginRight: 0 }}> {/* First Row*/}
-                
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='AppointTitle' > 
-
                                 <h1 className='titleStyle'> Select A Day </h1> 
-
                         </div>   
                     </Col>
             </Row>
-           
                 <Row style={{ marginLeft: 0, marginRight: 0 }}> {/* Second Row*/}
                     <Col style={{ marginLeft: 0, marginRight: 0 }}>
                         <div className='AppointInfo'>
-                                <Calendar onClickDay = {(e) => test(e)}/>
+                                <Calendar onClickDay = {(e) => settingDay(e)}/>
                                { show === true ? <div className='timeBox'>
                                     <TimeMenu 
                                     show={show}
@@ -64,9 +59,8 @@ function SelectDate(props){
                                     />
                                 </div> : null}
                         </div>
-                        
                     </Col>
-
+                    
                     <Col style={{ marginLeft: 0, marginRight: 0 }}>
                         <br></br>
 
@@ -89,7 +83,7 @@ function SelectDate(props){
             </Row>
         </div>
     </div>
-    )
+    );
 };
 //   const date = (e) => {
                 

@@ -19,8 +19,7 @@ function HomePage(props) {
   
         <div className='mainContainer'>
            
-            <div >
-                
+            <div>
                 <Row style={{ marginLeft: 0, marginRight: 0 }}> {/* <-------- Everything is inside this ROW */}
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='header'>

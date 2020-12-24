@@ -8,20 +8,19 @@ import './AppointmentDashboard.css';
 // FOR RETURNING CLIENTS!!!
 
 function AppointmentDashboard(props){
-
-    const appointments = useSelector(state=>state.appointments)
+    const appointments = useSelector(state => state.appointments)
     const dispatch = useDispatch()
-  if(!appointments.isLoaded){
+
+    if(!appointments.isLoaded){
     dispatch(handleAppointments)
-}
+    }
+
     return(
-        <div className='mainContainer'>
+        <div className='mainContainer'> 
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='AppointTitle' > 
-
-                                <h1 className='titleStyle'> Here Are Your Appointments </h1> 
-
+                                <h1 className='titleStyle'> Here Are Your Appointments! </h1> 
                         </div>   
                     </Col>
             </Row>
@@ -47,8 +46,9 @@ function AppointmentDashboard(props){
                     </div>   
                 </Col>
             </Row>
+
            <div className='buttonContainer'>
-                    <button  onClick={()=> {  localStorage.clear()
+                    <button  onClick={()=> { localStorage.clear()
                                         props.history.push('/home_page') }}>
                         LOG OUT?
                     </button>
@@ -60,10 +60,10 @@ function AppointmentDashboard(props){
                     </button>
                 
                 <br></br>
-           </div> {/* this closes buttons*/}
-        </div>
-    )
-}
+           </div> {/* this DIV closes buttons*/}
+        </div> 
+    ) // closes return
+}; // closes class
 
 
 export default AppointmentDashboard;

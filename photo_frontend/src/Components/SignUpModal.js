@@ -5,6 +5,7 @@ import { createClient } from '../store/actions';
 class signUpModal extends React.Component{
 
   render(){
+    
   return (
     <Modal
       {...this.props}
@@ -13,72 +14,65 @@ class signUpModal extends React.Component{
       centered
     >
       <Form onSubmit={ (e) => { createClient(e, this.props.history) }}>
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          SIGN UP
-      </Modal.Title>
-      </Modal.Header>
+        <Modal.Header closeButton>
+            <Modal.Title id="contained-modal-title-vcenter">
+                SIGN UP
+          </Modal.Title>
+        </Modal.Header>
       <Modal.Body>
         <h4>Who exactly are you?</h4>
+            <div> {/* STARTS HERE */}
+              <InputGroup className="mb-3">
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder="Something to call you.."
+                  aria-label="Full Name"
+                  aria-describedby="basic-addon1"
+                
+                />
+              </InputGroup>
 
-        <div>
+              <InputGroup className="mb-3">
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder='Youremail@fakemail.com'
+                  aria-label="Email"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
 
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              placeholder="Something to call you.."
-              aria-label="Full Name"
-              aria-describedby="basic-addon1"
-             
-            />
-          </InputGroup>
+              <InputGroup className="mb-3">
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="basic-addon1">Phone</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder="To Stay In Contact"
+                  aria-label="Phone"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
 
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              placeholder='Youremail@fakemail.com'
-              aria-label="Email"
-              aria-describedby="basic-addon1"
-            />
-          </InputGroup>
-
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">Phone</InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              placeholder="To Stay In Contact"
-              aria-label="Phone"
-              aria-describedby="basic-addon1"
-            />
-          </InputGroup>
-
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">Password</InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              placeholder="Something secret"
-              aria-label="Password"
-              aria-describedby="basic-addon1"
-              type='password'
-            />
-          </InputGroup>
-
-      </div>
-
+              <InputGroup className="mb-3">
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="basic-addon1">Password</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder="Something secret"
+                  aria-label="Password"
+                  aria-describedby="basic-addon1"
+                  type='password'
+                />
+              </InputGroup>
+          </div> {/* ENDS HERE */}
       </Modal.Body>
       <Modal.Footer>
         <button type='submit'>
           Submit
         </button>
-        {/* <Button onClick={(e)=> { createClient(e)
-                              this.props.history.push('/client_dashboard')}} > Submit </Button> */}
-        {/* <Button onClick={this.props.onHide}>Close</Button> */}
       </Modal.Footer>
       </Form>
     </Modal>
