@@ -6,16 +6,15 @@ import TimeMenu from './TimeMenu';
 import Calendar from 'react-calendar';
 
 function SelectDate(props){
-
+    
     const selectedPhotographer = useSelector( state => state.photographers.selectedPhotographer )
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [time, setTime] = useState('');
 
-    // const [time, setTime] = useState('');
-
-    // const handleTime = (time) => setTime(time)
+    const handleTime = (time) => setTime(time)
 
     const [day, setDay] = useState('');
 
@@ -23,7 +22,7 @@ function SelectDate(props){
     
     const settingDay = (e) =>{
         // console.log('day has been clicked', e.getDate(), 'this is the id', localStorage.id)
-        handleShow();
+        handleShow()
         handleSetDay(e.getDate())
     };
 

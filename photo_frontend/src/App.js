@@ -4,31 +4,20 @@ import HomePage from './Components/HomePage/HomePage';
 import ClientDashboard from './Components/ClientDashboard/ClientDashboard';
 import AppointmentDashboard from './Components/AppointmentDashboard/AppointmentDashboard';
 import SelectDate from './Components/SelectDate/SelectDate';
-// import NavBar from './NavBar';
-// import { handleAppointments, handleClients, handlePhotos, handleAddress } from './store/actions'; //imported from actions.js
-// import { useDispatch }  from 'react-redux';
 
-function App() {
-      // const [modalShow, setModalShow] = React.useState(false);
-  
-
-  // const dispatch = useDispatch()                                                            
+function App() {                                                 
 
   return (
     <BrowserRouter>
-
      <Switch>
         <Route path="/home_page" component={HomePage}/>
         <Route path="/client_dashboard" component={ClientDashboard}/>
         <Route path='/appointments_dashboard' component={AppointmentDashboard}/>
         <Route path='/select_date' component={SelectDate} />
     </Switch>
-   
     </BrowserRouter>
   );
-}
-
-
+};
 export default App;
 
 //       <button onClick={ () => dispatch( handleAppointments )}> This is for Appointments </button>

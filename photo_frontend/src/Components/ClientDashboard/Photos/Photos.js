@@ -4,12 +4,11 @@ import { Carousel } from 'react-bootstrap';
 
 function Photos(props){
 
-    const photographers = useSelector(state => state.photographers)
+    const photographers = useSelector(state => state.photographers);
+    
     const photographerArray = photographers.photographers.filter( photographer => {
        return photographer.id
-    })
-    
-    console.log(photographerArray)
+    });
 
     return(
         <Carousel className='photos'>

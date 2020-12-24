@@ -3,8 +3,8 @@ class ClientsController < ApplicationController
    skip_before_action :check_authentication, only: [:create, :index, :show]
 
    def index
-    @clients = Client.all
-    render json: @clients
+    clients = Client.all
+    render json: clients
    end
 
    def show

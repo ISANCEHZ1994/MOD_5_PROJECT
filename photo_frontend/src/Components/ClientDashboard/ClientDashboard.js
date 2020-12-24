@@ -7,7 +7,7 @@ import './ClientDashboard.css';
 
 function ClientDashboard(props){
     
-
+    console.log(props, 'this is the client dashboard')
     const photographers = useSelector(state => state.photographers) // calls from the reducer index where we assigned the
                                                                     // photographer property which leads the photographer reducer
                                                                     // which then leads to the actions folder
@@ -15,6 +15,7 @@ function ClientDashboard(props){
     if(!photographers.isLoaded){
         dispatch(handlePhotographers)
     }
+
     return(
 <div className='mainContainer'>
             <Row style={{ marginLeft: 0, marginRight: 0 }}>

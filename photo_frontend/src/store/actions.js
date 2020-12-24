@@ -57,7 +57,7 @@ export const sendAppointHandler = ( time,data ) =>{
         })
         .then( resp => resp.json() )
         .then( newAppointment => {
-            console.log(newAppointment)
+            // console.log(newAppointment)
             // debugger
             dispatch(sendAppointHandlerAsync(newAppointment))
         })
