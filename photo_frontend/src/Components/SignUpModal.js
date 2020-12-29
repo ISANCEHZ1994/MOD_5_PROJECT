@@ -3,10 +3,12 @@ import { Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
 import { createClient } from '../store/actions';
 
 class signUpModal extends React.Component{
+  
 
   render(){
-    
+ 
   return (
+    
     <Modal
       {...this.props}
       size="lg"
@@ -30,7 +32,6 @@ class signUpModal extends React.Component{
                   placeholder="Something to call you.."
                   aria-label="Full Name"
                   aria-describedby="basic-addon1"
-                
                 />
               </InputGroup>
 

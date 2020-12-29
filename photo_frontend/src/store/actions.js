@@ -125,6 +125,8 @@ export const createClient = (e, history) => {
         localStorage.email = clientInfo.email
         localStorage.id = clientInfo.id
         localStorage.token = clientInfo.token
+        // console.log(localStorage)
+        
         if(clientInfo.token){
             history.push('/client_dashboard')
         }

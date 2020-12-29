@@ -13,6 +13,11 @@ Rails.application.routes.draw do
 
   # get '/addresses', to: 'addresses#index'
 
+  resources :clients do
+    member do
+      get :confirm_email
+    end
+  end
   
 
 end

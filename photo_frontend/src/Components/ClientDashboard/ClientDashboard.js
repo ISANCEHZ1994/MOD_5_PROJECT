@@ -1,23 +1,37 @@
 import  React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  Row, Col } from 'react-bootstrap';
+import {  Row, Col, Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
 import Photographers from './Photographers/Photographers'
 import { handlePhotographers } from '../../store/actions';
 import './ClientDashboard.css';
 
 function ClientDashboard(props){
+    // console.log(localStorage)
+    // console.log(props, 'this is the client dashboard')
     
-    console.log(props, 'this is the client dashboard')
     const photographers = useSelector(state => state.photographers) // calls from the reducer index where we assigned the
                                                                     // photographer property which leads the photographer reducer
                                                                     // which then leads to the actions folder
     const dispatch = useDispatch()
     if(!photographers.isLoaded){
         dispatch(handlePhotographers)
-    }
+    };
+
+    // if(localStorage.email === true){
+    //     return(
+    //     <Modal>
+    //         <Modal.Header closeButton>
+    //             <Modal.Title id="contained-modal-title-vcenter">
+    //                 So To Confirm..
+    //             </Modal.Title>
+    //         </Modal.Header>
+    //     </Modal>
+    //     )
+    // };
 
     return(
 <div className='mainContainer'>
+      
             <Row style={{ marginLeft: 0, marginRight: 0 }}>
                     <Col style={{ paddingLeft: 0, paddingRight: 0 }}> 
                         <div className='title' > 
