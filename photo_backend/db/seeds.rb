@@ -128,4 +128,4 @@ testAppointment3 = Appointment.create({
     photographer_id: martha.id, client_id: mary.id, time: "Jan 27 2020 4:30"
 })
 
-puts 'seeded BITCH'
+puts 'data is seeded';

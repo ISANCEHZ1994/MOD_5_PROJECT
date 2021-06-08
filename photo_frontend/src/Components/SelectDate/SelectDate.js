@@ -12,9 +12,9 @@ function SelectDate(props){
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [time, setTime] = useState('');
+    // const [time, setTime] = useState('');
 
-    const handleTime = (time) => setTime(time)
+    // const handleTime = (time) => setTime(time)
 
     const [day, setDay] = useState('');
 
@@ -26,7 +26,7 @@ function SelectDate(props){
         handleSetDay(e.getDate())
     };
 
-    //BEHOLD USING INVERSE DATA FLOW you slow fuck
+    //BEHOLD USING INVERSE DATA FLOW 
     const functionFromParent = (time) =>{
         // Here I want to start using this data to save a date on the calandar
         console.log('proving a point', time, day, localStorage.id)

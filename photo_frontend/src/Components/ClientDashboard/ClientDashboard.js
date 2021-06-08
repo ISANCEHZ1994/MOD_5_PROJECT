@@ -1,6 +1,6 @@
 import  React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  Row, Col, Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
+import {  Row, Col } from 'react-bootstrap';
 import Photographers from './Photographers/Photographers'
 import { handlePhotographers } from '../../store/actions';
 import './ClientDashboard.css';
